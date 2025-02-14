@@ -7,43 +7,38 @@ const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
 app.set("json spaces", 2);
 
+// Middleware
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware CORS
-app.use(cors());
-
-// Import AI
+// Import API Routes
 require('./ai/blackbox')(app);
 require('./ai/luminAI')(app);
 require('./ai/thinkai')(app);
-
-// Import Berita
 require('./berita/liputan6')(app);
-
-// Import Search
 require('./search/goodread')(app);
 require('./search/ypia')(app);
 require('./search/rumaysho')(app);
 require('./search/surah')(app);
 require('./search/jadwalsholat')(app);
 
-// Endpoint untuk halaman HTML utama
+// Route untuk Home
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Handle 404 error
-app.use((req, res, next) => {
-  res.status(404).send("Sorry can't find that!");
+// Handle 404
+app.use((req, res) => {
+  res.status(404).send("404 - Not Found");
 });
 
-// Handle error
+// Handle Server Error
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send('500 - Internal Server Error');
 });
 
-// Jalankan server
+// Jalankan Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
