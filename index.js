@@ -10,8 +10,6 @@ app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-
-const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
 app.set("json spaces", 2);
