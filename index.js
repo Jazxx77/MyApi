@@ -25,8 +25,6 @@ require('./ai/thinkai')(app);
 require('./berita/liputan6')(app);
 
 // Import Search
-require('./search/goodread')(app);
-require('./search/ypia')(app);
 require('./search/rumaysho')(app);
 require('./search/surah')(app);
 require('./search/jadwalsholat')(app);
