@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+// Full Kode Di Github Saya : https://github.com/Lenwyy/
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
@@ -13,9 +15,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 // Import AI
-require('./ai/blackbox')(app);
-require('./ai/luminai')(app);
-require('./ai/thinkai')(app);
+require('./ai/Blackbox')(app);
+require('./ai/LuminAI')(app);
+require('./ai/Thinkai')(app);
 
 // Import Berita
 require('./berita/liputan6')(app);
@@ -27,23 +29,14 @@ require('./search/rumaysho')(app);
 require('./search/surah')(app);
 require('./search/jadwalsholat')(app);
 
-// Import Routes
-const aiRoutes = require('./routes/ai');
-const downloaderRoutes = require('./routes/downloader');
-const searchRoutes = require('./routes/search');
-
-app.use('/api/ai', aiRoutes);
-app.use('/api/downloader', downloaderRoutes);
-app.use('/api/search', searchRoutes);
-
-// Endpoint untuk halaman utama
+// Endpoint untuk halaman HTML utama
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Handle 404 error
 app.use((req, res, next) => {
-  res.status(404).send("Sorry, can't find that!");
+  res.status(404).send("Sorry can't find that!");
 });
 
 // Handle error
@@ -54,7 +47,7 @@ app.use((err, req, res, next) => {
 
 // Jalankan server
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = app;
