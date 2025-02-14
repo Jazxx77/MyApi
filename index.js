@@ -13,9 +13,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 // Import AI
-require('./ai/Blackbox')(app);
-require('./ai/LuminAI')(app);
-require('./ai/Thinkai')(app);
+require('./ai/blackbox')(app);
+require('./ai/luminAI')(app);
+require('./ai/thinkai')(app);
 
 // Import Berita
 require('./berita/liputan6')(app);
