@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - JazxCode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .store-item {
+            background: white;
+            color: black;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #eee;
+        }
+    </style>
+    <script>
+        function directToWhatsApp(item) {
+            window.location.href = `https://wa.ma/6281340587164?text=Saya%20ingin%20membeli%20${item}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Welcome to Our Store 🛒</h1>
+        <p>Find the best tools and services here.</p>
+        
+        <div class="store-item">
+            <h3>Premium API Access</h3>
+            <p>Unlock premium API features with high-speed access.</p>
+            <button onclick="directToWhatsApp('Premium API Access')">Buy Now</button>
+        </div>
+
+        <div class="store-item">
+            <h3>Custom API Development</h3>
+            <p>Order a custom-built API to fit your needs.</p>
+            <button onclick="directToWhatsApp('Custom API Development')">Buy Now</button>
+        </div>
+
+        <div class="store-item">
+            <h3>Consultation Service</h3>
+            <p>Get expert advice on API development and deployment.</p>
+            <button onclick="directToWhatsApp('Consultation Service')">Buy Now</button>
+        </div>
+        
+        <p><a href="index.html">Back to Home</a></p>
+    </div>
+    <footer>
+        &copy; 2025 JazxCode. All rights reserved.
+    </footer>
+</body>
+</html>

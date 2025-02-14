@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API - JazxCode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background: yellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #eee;
+        }
+    </style>
+    <script>
+        function getUserIP() {
+            fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-address').innerText = data.ip;
+                })
+                .catch(error => console.error('Error fetching IP:', error));
+        }
+        function getDeviceInfo() {
+            let userAgent = navigator.userAgent;
+            document.getElementById('device-info').innerText = userAgent;
+        }
+        window.onload = function() {
+            getUserIP();
+            getDeviceInfo();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Welcome to REST API 🚀</h1>
+        <p>Server is running and ready to use.</p>
+        <h2>🌟 About This API 🌟</h2>
+        <p>This REST API provides various functionalities, including AI, search, and news services.</p>
+        <h3>👨‍💻 Created by: <strong>JazxCode</strong></h3>
+        <p><a href="store.html">Visit Our Store</a> | <a href="creator.html">About the Creator</a></p>
+        
+        <h2>Your Information</h2>
+        <p><strong>IP Address:</strong> <span id="ip-address">Fetching...</span></p>
+        <p><strong>Device Info:</strong> <span id="device-info">Fetching...</span></p>
+        <input type="email" id="email-input" placeholder="Enter your email">
+        <button onclick="showEmail()">Submit</button>
+        <p><strong>Email:</strong> <span id="email-display">No email provided</span></p>
+    </div>
+    <footer>
+        &copy; 2025 JazxCode. All rights reserved.
+    </footer>
+</body>
+</html>
