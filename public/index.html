@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryzendesu API Clone</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #1e1e2e;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.2rem;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyApi - REST API Service</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    header {
+      background: #161b22;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #58a6ff;
+    }
+    .content {
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+    }
+    .content p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .content a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #238636;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .content a.button:hover {
+      background: #2ea043;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Ryzendesu API Clone</h1>
-        <p>This is a REST API service providing various utilities, anime data, AI tools, and more.</p>
-        <p>Explore the API and enjoy seamless integrations!</p>
-    </div>
+  <header>
+    <h1>MyApi REST API</h1>
+  </header>
+  <div class="content">
+    <p>
+      Welcome to MyApi, your ultimate REST API service providing a variety of tools and endpoints for your applications.
+    </p>
+    <p>
+      Explore our documentation to learn how to integrate our API into your projects seamlessly.
+    </p>
+    <a href="/docs" class="button">View Documentation</a>
+  </div>
+  <footer>
+    &copy; 2025 MyApi. All rights reserved.
+  </footer>
 </body>
 </html>
