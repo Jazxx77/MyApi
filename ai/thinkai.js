@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/ai/thinkai', (req, res) => res.json({ message: 'ThinkAI API' })); };

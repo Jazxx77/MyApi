@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/ai/blackbox', (req, res) => res.json({ message: 'Blackbox AI API' })); };

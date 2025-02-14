@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/ai/luminai', (req, res) => res.json({ message: 'LuminAI API' })); };
