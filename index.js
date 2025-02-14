@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 // Import API Routes
-require(...)
+require('...')
 require('./ai/blackbox')(app);
 require('./ai/luminAI')(app);
 require('./ai/thinkai')(app);
