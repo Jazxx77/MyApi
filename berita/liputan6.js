@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/berita/liputan6', (req, res) => res.json({ message: 'Liputan6 API' })); };
