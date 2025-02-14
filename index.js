@@ -2,8 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-// Full Kode Di Github Saya : https://github.com/Lenwyy/
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.enable("trust proxy");
