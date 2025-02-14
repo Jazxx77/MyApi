@@ -1,7 +1,8 @@
+const express = require('express');
+const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./public/swagger.json');
 
-const app = express();
 
 // Middleware untuk dokumentasi API
 app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
