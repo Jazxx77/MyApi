@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REST API - JazxCode</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,17 +21,14 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        input {
+        input, button {
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
         }
         button {
-            padding: 10px 15px;
             background: yellow;
-            border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
         a {
@@ -57,8 +55,11 @@
                 .catch(error => console.error('Error fetching IP:', error));
         }
         function getDeviceInfo() {
-            let userAgent = navigator.userAgent;
-            document.getElementById('device-info').innerText = userAgent;
+            document.getElementById('device-info').innerText = navigator.userAgent;
+        }
+        function showEmail() {
+            const email = document.getElementById('email-input').value;
+            document.getElementById('email-display').innerText = email ? email : "No email provided";
         }
         window.onload = function() {
             getUserIP();
@@ -87,4 +88,3 @@
     </footer>
 </body>
 </html>
-
