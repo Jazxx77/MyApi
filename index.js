@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const favicon = require('serve-favicon');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,6 +11,7 @@ app.set("json spaces", 2);
 // Middleware
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
 
 // Import API Routes
 require('./ai/blackbox')(app);
@@ -25,6 +27,11 @@ require('./search/jadwalsholat')(app);
 // Route untuk Home
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Handle request favicon jika tidak terdeteksi
+app.get('/favicon.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'favicon.png'));
 });
 
 // Handle 404
