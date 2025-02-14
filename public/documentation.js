@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const apiUrl = "https://apizjazx.vercel.app/"; // Ganti dengan URL API yang benar
+    const apiUrl = "https://apizjazx.vercel.app"; // Ganti dengan URL API yang benar
     const output = document.getElementById("apiResponse");
 
     document.getElementById("testApi").addEventListener("click", function () {
