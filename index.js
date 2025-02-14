@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 // Handle request favicon jika tidak terdeteksi
-app.get('/favicon.png', (req, res) => {
+app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'favicon.png'));
 });
 
