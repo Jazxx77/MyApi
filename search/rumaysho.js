@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/search/rumaysho', (req, res) => res.json({ message: 'Rumaysho API' })); };

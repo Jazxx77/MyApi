@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/search/jadwalsholat', (req, res) => res.json({ message: 'Jadwal Sholat API' })); };

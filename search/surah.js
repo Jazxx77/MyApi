@@ -1,0 +1,1 @@
+module.exports = (app) => { app.get('/api/search/surah', (req, res) => res.json({ message: 'Surah API' })); };
