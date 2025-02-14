@@ -44,7 +44,7 @@
     </style>
     <script>
         function directToWhatsApp(item) {
-            window.location.href = `https://wa.me/6281340587164?text=Saya%20ingin%20membeli%20${item}`;
+            window.location.href = `javascript:void(0)" onclick="redirectToWhatsApp()`;
         }
     </script>
 </head>
@@ -76,5 +76,15 @@
     <footer>
         &copy; 2025 JazxCode. All rights reserved.
     </footer>
+
+<script>
+    function redirectToWhatsApp() {
+        let item = document.getElementById("itemName").innerText || "produk";
+        let phone = "6281340587164";
+        let message = encodeURIComponent("Saya ingin membeli " + item);
+        window.location.href = "https://wa.me/" + phone + "?text=" + message;
+    }
+</script>
+
 </body>
 </html>
