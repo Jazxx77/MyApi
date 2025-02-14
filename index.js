@@ -7,7 +7,6 @@ const swaggerDocument = require('./public/swagger.json');
 // Middleware untuk dokumentasi API
 app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-
 const cors = require('cors');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
