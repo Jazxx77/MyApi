@@ -1,0 +1,27 @@
+
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My API Documentation",
+    "version": "1.0.0",
+    "description": "Dokumentasi API interaktif menggunakan Swagger UI"
+  },
+  "servers": [
+    {
+      "url": "https://myapi-smoky.vercel.app",
+      "description": "Server utama"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Halaman utama API",
+        "responses": {
+          "200": {
+            "description": "Berhasil mengambil halaman utama"
+          }
+        }
+      }
+    }
+  }
+}
